@@ -1,1 +1,14 @@
-<p>home works!</p>
+<h2 class="section-title">PRODUCTOS DESTACADOS</h2>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4 col-sm-6 col-12" *ngFor="let product of products">
+      <div class="product-card mb-5 mt-5">
+        <img src="images/{{product.name}}.jpeg" alt="{{ product.name }}">
+        <h2>{{ product.name }}</h2>
+        <p><strong>Price:</strong> {{ product.price | currency }}</p>
+        <p><strong>Stock:</strong> {{ product.stock }}</p>
+        <a [routerLink]="['/product', product.id]" class="btn btn-primary">Ver detalles</a>
+      </div>
+    </div>
+  </div>
+</div>
