@@ -4,6 +4,12 @@
         <img src="images/{{product?.name}}.jpeg" alt="{{ product?.name }}">
         <p class="description-text"><strong>Descripción:</strong> {{ product?.description }}</p>
         <p class="description-text"><strong>Dimensiones:</strong> {{ product?.dimensions }}</p>
+        <p class="description-text"><strong>Precio:</strong> {{ product?.price }} €</p>
+        <p class="description-text"><strong>Stock:</strong> {{ product?.stock }}</p>
+        <a [routerLink]="['/checkout', product?.id]" class="btn btn-primary">Comprar</a>
+        <button class="btn-add-cart" (click)="addToCart()">Añadir al Carrito</button>
+
         
+
     </section>
 </article>

@@ -1,26 +1,86 @@
-.product-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  background: #fff;
-}
-
-.product-card img {
-  max-width: 50%;
-  height: auto;
-  border-radius: 8px;
-}
-
+/* Estilo para la sección de productos destacados */
 .section-title {
   text-align: center;
-  font-size: 2rem; /* Tamaño más grande */
+  font-size: 24px;
   font-weight: bold;
-  text-transform: uppercase; /* Mayúsculas */
-  letter-spacing: 2px; /* Espaciado entre letras */
-  color: #333; /* Color oscuro elegante */
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
+/* Contenedor de la tarjeta de producto */
+.product-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen del producto */
+.product-card img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Nombre del producto */
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Precio y stock */
+.product-price,
+.product-stock {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Botones */
+.button-group {
+  margin-top: 15px;
+}
+
+.btn-primary,
+.btn-add-cart {
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  width: 48%;
+  margin: 5px;
+}
+
+/* Botón Ver Detalles */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Botón Añadir al Carrito */
+.btn-add-cart {
+  background-color: #ff6600;
+  color: white;
+}
+
+.btn-add-cart:hover {
+  background-color: #e65c00;
+}

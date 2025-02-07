@@ -4,6 +4,7 @@ import { dataStock } from '../data-stock'; // Ajusta la ruta según tu estructur
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProductService } from '../product.service';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-home',
@@ -15,8 +16,15 @@ import { ProductService } from '../product.service';
 export class HomeComponent implements OnInit {
   products: Product[] = [];
   productService: ProductService = inject(ProductService);
+  cartService = inject(CartService);
 
   ngOnInit(): void {
     this.products = this.productService.getAllProducts();
   }
+
+  addToCart(product: Product): void {
+    this.cartService.addToCart(product);
+    console.log(`Producto añadido al carrito: ${product.name}`);
+  }
+
 }
